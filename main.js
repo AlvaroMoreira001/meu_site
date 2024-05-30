@@ -5,9 +5,5 @@ document.addEventListener('DOMContentLoaded', () => {
             delay: 3000, // Tempo entre as transições automáticas
             disableOnInteraction: false,
         },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
     });
 });

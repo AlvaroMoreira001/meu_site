@@ -93,7 +93,7 @@ form button:hover {
     background-color: #0056b3;
 }
 
-/* Responsividade (Exemplo) */
+/* Responsividade */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -101,6 +101,32 @@ form button:hover {
 
     nav a {
         margin: 0.5em 0;
+    }
+
+    header img {
+        height: 50px;
+    }
+
+    section {
+        padding: 2em 1em;
+    }
+
+    .swiper-slide img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        font-size: 0.8em;
+    }
+
+    form input, form textarea {
+        padding: 0.8em;
+    }
+
+    form button {
+        padding: 0.8em 1.6em;
     }
 }
 
@@ -121,9 +147,4 @@ form button:hover {
     width: 350px;
     height: 150px;
     object-fit: contain;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-    color: #007bff; /* Cor dos botões de navegação */
 }
