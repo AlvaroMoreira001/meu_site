@@ -10,6 +10,7 @@ body {
 h2 {
     color: #007bff; 
     margin-bottom: 1em;
+    text-align: center;
 }
 
 /* Cabeçalho e Rodapé */
@@ -51,6 +52,27 @@ section {
     text-align: center; 
 }
 
+.section-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-content img {
+    flex: 1;
+    max-width: 40%;
+    height: auto;
+    margin-right: 2em;
+}
+
+.section-text {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+    padding: 1em;
+}
+
 /* Alteração para excluir o cabeçalho */
 section:not(#home) ~ section {  
     background-color: #f8f9fa;
@@ -61,10 +83,16 @@ section:not(#home) ~ section {
     margin: 0 auto;
 }
 
-.responsive-img {
+.responsive-img1 {
+    max-width: 10%;
+    height: auto;
+    margin-right: 2em;
+}
+
+.responsive-img2 {
     max-width: 100%;
     height: auto;
-    margin-bottom: 2em; 
+    margin-bottom: 2em;
 }
 
 /* Formulário de Contato */
@@ -111,6 +139,19 @@ form button:hover {
         padding: 2em 1em;
     }
 
+    .section-content {
+        flex-direction: column;
+    }
+
+    .section-content img {
+        max-width: 100%;
+        margin: 0 auto 1em auto;
+    }
+
+    .section-text {
+        text-align: center;
+    }
+
     .swiper-slide img {
         width: 80%;
     }
@@ -147,4 +188,12 @@ form button:hover {
     width: 350px;
     height: 150px;
     object-fit: contain;
+}
+
+/* Estilos da seção de Serviços */
+.services-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1em;
+    margin-top: 2em;
 }
