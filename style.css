@@ -1,55 +1,69 @@
 /* Estilos Gerais */
 body {
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    line-height: 1.6; 
+    line-height: 1.6;
 }
 
 h2 {
-    color: #007bff; 
+    color: #007bff;
     margin-bottom: 1em;
     text-align: center;
 }
 
 /* Cabeçalho e Rodapé */
-header, footer { 
-    background-color: #333; 
-    color: #fff; 
-    padding: 1em;
-}
-
 header {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centraliza verticalmente os itens no cabeçalho */
 }
 
 header img {
-    height: 80px; 
+    height: 50px; 
+    margin-right: 1em; /* Adiciona espaço entre a logo e os botões */
 }
 
-/* Navegação */
 nav {
     display: flex;
-    justify-content: flex-end; 
-    align-items: center;
+    margin-left: auto; /* Move os botões para a direita */
 }
 
 nav a {
     color: #fff;
-    margin: 0 1em;
+    margin: 0 0.5em; /* Espaçamento entre os botões */
     text-decoration: none;
-    font-weight: 500; 
+    font-weight: 500;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
+footer { 
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center; 
+}
+
+/* Adiciona espaço para compensar o cabeçalho fixo */
+body {
+    padding-top: 70px;
+}
+
 /* Seções */
 section {
-    padding: 3em 1em; 
-    text-align: center; 
+    padding: 3em 1em;
+    text-align: center;
 }
 
 .section-content {
@@ -74,7 +88,7 @@ section {
 }
 
 /* Alteração para excluir o cabeçalho */
-section:not(#home) ~ section {  
+section:not(#home) ~ section {
     background-color: #f8f9fa;
 }
 
@@ -84,15 +98,15 @@ section:not(#home) ~ section {
 }
 
 .responsive-img1 {
-    max-width: 10%;
+    max-width: 40%; 
     height: auto;
-    margin-right: 2em;
+    margin-bottom: 2em; 
 }
 
 .responsive-img2 {
     max-width: 100%;
     height: auto;
-    margin-bottom: 2em;
+    margin-bottom: 2em; 
 }
 
 /* Formulário de Contato */
@@ -132,7 +146,7 @@ form button:hover {
     }
 
     header img {
-        height: 50px;
+        max-height: 50px; 
     }
 
     section {
